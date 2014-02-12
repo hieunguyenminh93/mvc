@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * registry
+ * 
+ * @package   
+ * @author mvc
+ * @copyright nguyen minh hieu
+ * @version 2014
+ * @access public
+ */
+class Registry
+{
+    private $data = array();
+
+    public function get($key)
+    {
+        return (isset($this->data[$key]) ? $this->data[$key] : null);
+    }
+
+    public function set($key, $value)
+    {
+        $this->data[$key] = $value;
+    }
+
+    public function has($key)
+    {
+        return isset($this->data[$key]);
+    }
+}
+?>
