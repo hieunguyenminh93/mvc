@@ -74,6 +74,7 @@ class ControllerInstallInstall extends Controller {
 				$output .= "define(\"SYSTEM_LIB\",\"$dir/system/library\");\n";
 				$output .= "define(\"SYSTEM_DB\",\"$dir/system/database\");\n";
 				$output .= "define(\"ENGINEER\", \"$dir/engineer\");\n";
+				$output .= "define(\"TEMPLATE\", \"$dir/themes\");\n";
 				$output .= "define(\"DB_HOSTNAME\",\"$hostname\");\n";
 				$output .= "define(\"DB_USER\",\"$username\");\n";
 				$output .= "define(\"DB_PASSWD\",\"$passwd\");\n";
