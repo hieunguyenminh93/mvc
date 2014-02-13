@@ -34,7 +34,7 @@
     define('ENGINEER', $_SERVER['DOCUMENT_ROOT'].'/mvc/install');
     
     //define template
-    define('TEMPALTE', $_SERVER['DOCUMENT_ROOT'].'/mvc/install/view');
+    define('TEMPLATE', $_SERVER['DOCUMENT_ROOT'].'/mvc/install/view');
     //define language
     define('LANGUAGE', $_SERVER['DOCUMENT_ROOT'].'/mvc/install/language');
     require_once 'start.php';
