@@ -21,7 +21,7 @@ final class Action {
 			}
 			
 			if (is_file(ENGINEER . '/controller/' . str_replace(array('../', '..\\', '..'), '', $path) . '.php')) {
-			
+				
 				$this->file = ENGINEER . '/controller/' . str_replace(array('../', '..\\', '..'), '', $path) . '.php';
 				
 				$this->class = 'Controller' . preg_replace('/[^a-zA-Z0-9]/', '', $path);

@@ -9,8 +9,11 @@
     require_once SYSTEM_LIB.'/request.php';
     require_once SYSTEM_LIB.'/response.php';
     require_once SYSTEM_LIB.'/document.php';
+    require_once SYSTEM_LIB.'/database.php';
     
     require_once SYSTEM_CLASS.'/loader.php';
     require_once SYSTEM_CLASS.'/front.php';
     require_once SYSTEM_CLASS.'/action.php';
+    //
+    //require_once SYSTEM_DB.'/mysql.php';
 ?>

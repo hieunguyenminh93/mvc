@@ -1,7 +1,8 @@
 <?php
-	class HomeController extends Controller{
+	class ControllerCommonHome extends Controller{
 		public function running(){
-			$this->language->get();
+			$this->language->get('/common/home');
+			
 		}
 	} 
 ?>

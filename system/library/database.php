@@ -16,6 +16,7 @@
             if(file_exists(SYSTEM_DB.'/'.$agrs['driver'].'.php')){
                 require_once SYSTEM_DB.'/'.$agrs['driver'].'.php'; 
             }else{
+            	echo SYSTEM_DB.'/'.$agrs['driver'].'.php';
                 exit('Error: Could not load database file ' . $agrs['driver'] . '!');
             }
             $this->driver = new $agrs['driver']($agrs['hostname'],$agrs['username'],$agrs['passwd'],$agrs['db']);

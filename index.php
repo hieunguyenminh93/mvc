@@ -16,16 +16,32 @@
     
     $db = new Database($db_config);
     $registry->set('db',$db);
-    //
-    
+    //loader 
+    $loader = new Loader($registry);
+    $registry->set("load", $loader);
+    //request
+    $request = new Request();
+    $registry->set("request", $request);
+    $route = $request->get['route'];
+    if(!isset($route)){
+    	$route = "common/home";
+    }
+    //response
+    $response = new Response();
+    $registry->set("response", $response);
     //language 
     $language = new Language(SYSTEM_LIB.'/language'); //this lang loading from database;
-    
+    $registry->set('language', $language);
+    //document
+    $document = new Document();
+    $registry->set('document', $document);
     //controller
     $controller = new Front($registry);
     //
-    $controller->addPreAction(new Action('common'));
-    $controller->dispatch(new Action('common'), 'E_ALL');
+    $controller->addPreAction(new Action('common/header'));
+    $controller->dispatch(new Action($route), 'E_ALL');
+    $response->output();
+    
     
     
 ?>
