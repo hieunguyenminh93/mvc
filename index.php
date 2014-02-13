@@ -27,14 +27,15 @@
     	$route = "common/home";
     }
     //response
+    $document = new Document();
+    $registry->set('document', $document);
     $response = new Response();
     $registry->set("response", $response);
     //language 
     $language = new Language(SYSTEM_LIB.'/language'); //this lang loading from database;
     $registry->set('language', $language);
     //document
-    $document = new Document();
-    $registry->set('document', $document);
+    
     //controller
     $controller = new Front($registry);
     //
