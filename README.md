@@ -1,7 +1,7 @@
 mvc
 ===
 
-web
+
 /*
 * This project is my web, using some thing code in project opencart. 
 * you can using my code and develop this code to using it! thanks
@@ -14,3 +14,6 @@ web
 1. Overview 
   I'm newbie programming, and i trying coding to building website. My english very bad. Okey, you can understand everything that I write!
   
+===
+This project not complile, you can help me create new version in engineer/controller to controller data to show, engineer/model to loading data to controller working!!!
+please here!! thanks!!!
