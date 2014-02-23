@@ -5,20 +5,6 @@ class ControllerInputSetting extends Controller {
 		$language = $this->language->load ( '/inputsetting' );
 		$this->request->clean ( $_POST ); // this language can load from config
 		                               
-		// get error
-		/* $er = array (
-				'hostname' => $this->language->get ( 'error_hostname' ),
-				'username' => $this->language->get ( 'error_username' ) 
-		);
-		$this->data ['error'] = $er; */
-		// print_r($this->request->post['error']);
-		//
-		
-		/* $this->data ['hostname'] = $this->request->post ['hostname'];
-		
-		$this->data ['username'] = $this->request->post ['username'];
-		$this->data ['paswd'] = $this->request->post ['passwd'];
-		$this->data ['db'] = $this->request->post ['db']; */
 		
 		$this->data ['text_hostname'] = $this->language->get ( 'text_hostname' );
 		$this->data ['name_hostname'] = $this->language->get ( 'text_name_hostname' );
