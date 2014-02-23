@@ -45,7 +45,7 @@ $registry->set ( 'language', $language );
 $controller = new Front ( $registry );
 //
 $controller->addPreAction ( new Action ( 'common/header' ) );
-$controller->dispatch ( new Action ( $route ), 'E_ALL' );
+$controller->dispatch ( new Action ( $route ), new Action("not_found"));
 $response->output ();
 
 ?>

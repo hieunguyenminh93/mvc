@@ -9,5 +9,5 @@ define("DB_HOSTNAME","localhost");
 define("DB_USER","root");
 define("DB_PASSWD","U3!h");
 define("DB_DRIVER","mysql");
-define("DB_DB","h2q");
+define("DB_DB","h2q1");
 ?>

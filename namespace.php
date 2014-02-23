@@ -4,6 +4,7 @@
     require_once SYSTEM_CLASS.'/action.php';
     require_once SYSTEM_CLASS.'/front.php';
     require_once SYSTEM_CLASS.'/loader.php';
+    require_once SYSTEM_CLASS.'/model.php';
     
     require_once SYSTEM_LIB.'/database.php';
     require_once SYSTEM_LIB.'/request.php';
