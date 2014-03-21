@@ -11,7 +11,7 @@ class ControllerInstallInstall extends Controller {
 		
 		if ($this->validate ()) {
 			
-			$this->template = TEMPALTE . '/install/install.tpl';
+			$this->template = TEMPLATE . '/install/install.tpl';
 			$this->children = array (
 					'common/header',
 					'common/title',
@@ -25,6 +25,9 @@ class ControllerInstallInstall extends Controller {
 		}
 	}
 	private function validate() {
+		$dir = dirname ( realpath ( "../index.php" ) );
+		if(file_exists($dir . '/config/config.php'))
+			return false;
 		$er = array ();
 		if (! $this->request->post ['hostname']) {
 			
@@ -44,6 +47,28 @@ class ControllerInstallInstall extends Controller {
 			return false;
 		}
 		return true;
+	}
+	private function create_config_admin($args){
+		$dir = dirname ( realpath ( "../index.php" ) );
+		$output .= "define(\"VERSION\",\"2\");\n";
+		$output .= "define(\"SYSTEM_CLASS\",\"$dir/system/class\");\n";
+		$output .= "define(\"SYSTEM_LIB\",\"$dir/system/library\");\n";
+		$output .= "define(\"SYSTEM_DB\",\"$dir/system/database\");\n";
+		$output .= "define(\"ENGINEER\", \"$dir/admin\");\n";
+		$output .= "define(\"TEMPLATE\", \"$dir/admin/view\");\n";
+		$output .= "define(\"LANGUAGE\",\"$dir/admin/language\");\n";
+		$output .= "define(\"DB_HOSTNAME\",\"$args[hostname]\");\n";
+		$output .= "define(\"DB_USER\",\"$args[username]\");\n";
+		$output .= "define(\"DB_PASSWD\",\"$args[passwd]\");\n";
+		$output .= "define(\"DB_DRIVER\",\"mysql\");\n";
+		$output .= "define(\"DB_DB\",\"$args[db]\");\n";
+		// more define here etc....
+		$config = fopen ( $dir . '/admin/config.php', 'x' );
+		
+		fwrite ( $config, "<?php\n" );
+		fwrite ( $config, $output );
+		fwrite ( $config, "?>" );
+		fclose ( $config );
 	}
 	private function install() {
 		// process for install after check validate finished!!!!
@@ -75,18 +100,51 @@ class ControllerInstallInstall extends Controller {
 				$output .= "define(\"SYSTEM_DB\",\"$dir/system/database\");\n";
 				$output .= "define(\"ENGINEER\", \"$dir/engineer\");\n";
 				$output .= "define(\"TEMPLATE\", \"$dir/themes\");\n";
+				$output .= "define(\"LANGUAGE\",\"$dir/engineer/language\");\n";
 				$output .= "define(\"DB_HOSTNAME\",\"$hostname\");\n";
 				$output .= "define(\"DB_USER\",\"$username\");\n";
 				$output .= "define(\"DB_PASSWD\",\"$passwd\");\n";
 				$output .= "define(\"DB_DRIVER\",\"mysql\");\n";
 				$output .= "define(\"DB_DB\",\"$database\");\n";
-				
+				// more define here etc....
 				$config = fopen ( $dir . '/config/config.php', 'x' );
 				
 				fwrite ( $config, "<?php\n" );
 				fwrite ( $config, $output );
 				fwrite ( $config, "?>" );
 				fclose ( $config );
+				//create admin config file
+				$this->create_config_admin($db_conf);
+				//create database;
+				$file = $dir.'/install/mysql/sql.sql';
+				 
+				if (!file_exists($file)) {
+					exit('Could not load sql file: ' . $file);
+				}
+				
+				$lines = file($file);
+				
+				if ($lines) {
+					$sql = '';
+				
+					foreach($lines as $line) {
+						if ($line && (substr($line, 0, 2) != '--') && (substr($line, 0, 1) != '#')) {
+							$sql .= $line;
+				
+							if (preg_match('/;\s*$/', $line)) {
+								$sql = str_replace("DROP TABLE IF EXISTS `oc_", "DROP TABLE IF EXISTS `" . $data['db_prefix'], $sql);
+								$sql = str_replace("CREATE TABLE `oc_", "CREATE TABLE `" . $data['db_prefix'], $sql);
+								$sql = str_replace("INSERT INTO `oc_", "INSERT INTO `" . $data['db_prefix'], $sql);
+				
+								$connect->query($sql);
+				
+								$sql = '';
+							}
+						}
+					}
+				}
+				//end create database;
+				
 				$this->data ['result'] = 'Install Finished!!!';
 				return true;
 			} else {

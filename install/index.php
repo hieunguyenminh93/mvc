@@ -1,42 +1,21 @@
 <?php
-    /* if (!file_exists("../config/config.php")) {
-    	$server = $_SERVER['DOCUMENT_ROOT'];
-    	$file = fopen("../config/config.php","x");
-    	fwrite($file, "<?php\n");
-    	//define version;
-    	$ver = "define(\"VERSION\",\"1.0.0\");\n";
-    	//define system class
-    	$system_class = "define(\"SYSTEM_CLASS\",\"$server/mvc/system/class\");\n";
-    	//define system library
-    	$system_lib = "define(\"SYSTEM_LIB\",\"$server/mvc/system/library\");\n";
-    	//define system database
-    	$system_db = "define(\"SYSTEM_DB\",\"$server/mvc/system/database\");\n";
-		/**
-		 * creating const setting
-		 */
-    	
-    	/* fwrite($file, $ver);
-    	fwrite($file, $system_class);
-    	fwrite($file, $system_lib);
-    	fwrite($file, $system_db);
-    	fwrite($file, "?>");
-    }
-     */ 
     if(file_exists("../config/config.php")){
         header("Location: ../index.php");
-        exit;
+        //exit;
     }
     //
-    define('SYSTEM_LIB',$_SERVER['DOCUMENT_ROOT'].'/mvc/system/library');
-    define('SYSTEM_CLASS', $_SERVER['DOCUMENT_ROOT'].'/mvc/system/class');
-    define('SYSTEM_DB', $_SERVER['DOCUMENT_ROOT'].'/mvc/system/database');
+    $dir = dirname ( realpath ( "../index.php" ) );
+   	
+    define('SYSTEM_LIB',$dir.'/system/library');
+    define('SYSTEM_CLASS', $dir.'/system/class');
+    define('SYSTEM_DB', $dir.'/system/database');
     //define Engineer
-    define('ENGINEER', $_SERVER['DOCUMENT_ROOT'].'/mvc/install');
+    define('ENGINEER', $dir.'/install');
     
     //define template
-    define('TEMPLATE', $_SERVER['DOCUMENT_ROOT'].'/mvc/install/view');
+    define('TEMPLATE', $dir.'/install/view');
     //define language
-    define('LANGUAGE', $_SERVER['DOCUMENT_ROOT'].'/mvc/install/language');
+    define('LANGUAGE', $dir.'/install/language');
     require_once 'start.php';
     $registry = new Registry();
     //language
@@ -45,9 +24,9 @@
     //request
     $request = new Request();
     $registry->set('request',$request);
-    
-    $route = $request->get['route'];
-    
+    if(isset($request->get['route'])){
+    	$route = $request->get['route'];
+    }
     if(!isset($route)){
     	$route = 'inputsetting';
     }

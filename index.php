@@ -1,11 +1,12 @@
 <?php
-define ( "VERSION", "1.0.0" );
+// if(defined ( "VERSION", "1.0.0" );
 if (file_exists ( 'config/config.php' )) {
 	include_once ('config/config.php');
 } else {
 	header ( "Location: install/index.php" );
 	exit ();
 }
+error_reporting ( '^E_NOTICE' );
 // Startup
 require_once 'namespace.php';
 // registry
@@ -31,6 +32,13 @@ $route = $request->get ['route'];
 if (! isset ( $route )) {
 	$route = "common/home";
 }
+// session create;
+$session = new Session ();
+$registry->set ( 'session', $session );
+// customer
+$customer = new Customer ( $registry );
+$registry->set ( 'customer', $customer );
+
 // document
 $document = new Document ();
 $registry->set ( 'document', $document );
@@ -38,14 +46,16 @@ $registry->set ( 'document', $document );
 $response = new Response ();
 $registry->set ( "response", $response );
 // language
-$language = new Language ( SYSTEM_LIB . '/language' ); // this lang loading from database;
+$language = new Language ( 'default/' ); // this lang loading from database;
 $registry->set ( 'language', $language );
 
 // controller
 $controller = new Front ( $registry );
 //
 $controller->addPreAction ( new Action ( 'common/header' ) );
-$controller->dispatch ( new Action ( $route ), new Action("not_found"));
+
+
+$controller->dispatch ( new Action ( $route ), new Action ( "error/not_found" ) );
 $response->output ();
 
 ?>

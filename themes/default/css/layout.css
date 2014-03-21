@@ -1,0 +1,113 @@
+* {
+    outline: medium none;
+}
+html {
+    background: none repeat scroll 0 0 #000000;
+    color: #000000;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, th, td {
+    margin: 0;
+    padding: 0;
+}
+.clr{
+	clear:both;
+}
+.wrapper{
+	margin: 0 auto;
+	width:1000px;
+	
+}
+.box-content{
+	width:100%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	height:30px;
+	box-shadow: 0 0 5px;
+	padding: 10px;
+	background: white;
+}
+.title-bar{
+	position:fixed;
+	margin-bottom:30px;
+	
+}
+.search{
+	margin: 0 auto;
+	width: 980px;
+}
+.logo{
+	width:100px;
+}
+.banner{
+	height: 200px;
+	
+}
+
+/*
+* menu button
+*/
+.menu{
+	float:right;
+	margin-right: 30px;
+}
+ul.bar-menu li {
+	display: inline-block;
+	background: #ddd;
+	height: 20px;
+	/*width: 140px;*/
+	padding: 5px 10px;
+	vertical-align: middle;
+}
+ul.bar-menu li li {
+	display: block;
+	background: #aaa;
+}
+ul.bar-menu li ul {
+	display: none;
+	padding: 0;
+}
+ul.bar-menu li:hover{
+	opacity: 0.8;
+	background: #aaa;
+}
+ul.bar-menu li:hover ul {
+	display: block;
+}
+ul.bar-menu li a{
+	text-decoration: none;
+}
+/*
+* end menu bar
+*/
+.body{
+	height: 1000px;
+}
+/*
+ * content for product
+ */
+
+.product{
+		width: 680px;
+		box-shadow: 0 0 5px;
+		float: right;
+}
+.product-category{
+		padding: 15px;
+}
+.product-detail{
+	float: left;
+	padding: 5px;
+	width:200px;
+	heigh:200px;
+	border: 1px solid aqua;
+	margin: 5px
+}
+.clr{
+	clear:both;
+	
+}
+
+/*
+ * end product
+ */

@@ -58,12 +58,12 @@ class ControllerErrorNotFound extends Controller {
 		}
 		
 		$this->children = array(
-			'common/column_left',
-			'common/column_right',
-			'common/content_top',
-			'common/content_bottom',
+			'common/header',
 			'common/footer',
-			'common/header'
+			'common/column_left',
+			'common/banner',
+			'common/menu',
+			'common/title_bar'
 		);
 		
 		$this->response->setOutput($this->render());

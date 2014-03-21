@@ -24,7 +24,7 @@ class ControllerInputSetting extends Controller {
 		
 		
 		$this->data ['text_button'] = $this->language->get ( 'text_button' );
-		$this->template = TEMPALTE . '/inputsetting.tpl';
+		$this->template = TEMPLATE . '/inputsetting.tpl';
 		$this->children = array (
 				'common/header',
 				'common/title',

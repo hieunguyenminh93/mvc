@@ -6,7 +6,7 @@
 			 */
 			
 			$this->data['title'] = $this->document->getTitle();
-			$this->template = TEMPALTE.'/common/header.tpl';
+			$this->template = TEMPLATE.'/common/header.tpl';
 			$this->response->setOutput($this->render());
 		}
 	} 

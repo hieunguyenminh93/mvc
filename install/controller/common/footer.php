@@ -4,7 +4,7 @@
 			/*
 			 * this method action to peform footer page;
 			 */
-			$this->template = TEMPALTE . '/common/footer.tpl';
+			$this->template = TEMPLATE . '/common/footer.tpl';
 			$this->response->setOutput($this->render());
 		}
 	} 

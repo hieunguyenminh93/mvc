@@ -14,7 +14,7 @@ class Language {
 	
 	public function load($filename) {
 		$file = LANGUAGE . '/' .$this->directory . $filename . '.php';
-    	
+    	//echo $file."-\n";
 		if (file_exists($file)) {
 			$_ = array();
 	  		
