@@ -4,42 +4,42 @@
     <link rel="stylesheet" type="text/css" href="../css/page.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <!-- bxSlider Javascript file -->
-    <script src="../javascript/jquery.bxslider/jquery.bxslider.min.js"></script>
+    <script src="../javascript/jquery.bxslider.min.js"></script>
     <!-- bxSlider CSS file -->
-    <link href="../javascript/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
+    <link href="../css/jquery.bxslider.css" rel="stylesheet" />
     <title></title>
 </head>
 <body>
 <div id="fixed-menu">fix
 </div>
+<div id="slider">
+    <div class="slider2">
+        <div class="slider"><img src="../img/1.jpeg" title="XEm thư coi sao"></div>
+        <div class="slider"><img src="../img/2.jpeg" title="XEm thư coi sao"></div>
+        <div class="slider"><img src="../img/3.jpeg" title="XEm thư coi sao"></div>
+        <div class="slider"><img src="../img/4.jpeg" title="XEm thư coi sao"></div>
+        <div class="slider"><img src="../img/5.jpeg" title="XEm thư coi sao"></div>
+        <div class="slider"><img src="../img/6.jpeg" title="XEm thư coi sao"></div>
+    </div>
+    <div id="bx-page">
+        <a data-slide-index="0"><img src="../img/1.jpeg" title="XEm thư coi sao"></a>
+        <a data-slide-index="1"><img src="../img/2.jpeg" title="XEm thư coi sao"></a>
+        <a data-slide-index="2"><img src="../img/3.jpeg" title="XEm thư coi sao"></a>
+        <a data-slide-index="3"><img src="../img/4.jpeg" title="XEm thư coi sao"></a>
+        <a data-slide-index="4"><img src="../img/5.jpeg" title="XEm thư coi sao"></a>
+        <a data-slide-index="5"><img src="../img/6.jpeg" title="XEm thư coi sao"></a>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(".slider2").bxSlider({
+                minSlides: 2,
+                pagerCustom: '#bx-page'
+            });
+        })
+    </script>
+</div>
 <div id="wrapper">
     <div id="container">
-        <div id="slider">
-            <div class="slider2">
-                <div class="slider"><img src="../img/1.jpeg" title="XEm thư coi sao"></div>
-                <div class="slider"><img src="../img/2.jpeg" title="XEm thư coi sao"></div>
-                <div class="slider"><img src="../img/3.jpeg" title="XEm thư coi sao"></div>
-                <div class="slider"><img src="../img/4.jpeg" title="XEm thư coi sao"></div>
-                <div class="slider"><img src="../img/5.jpeg" title="XEm thư coi sao"></div>
-                <div class="slider"><img src="../img/6.jpeg" title="XEm thư coi sao"></div>
-              </div>
-            <div id="bx-page">
-                <a data-slide-index="0"><img src="../img/1.jpeg" title="XEm thư coi sao"></a>
-                <a data-slide-index="1"><img src="../img/2.jpeg" title="XEm thư coi sao"></a>
-                <a data-slide-index="2"><img src="../img/3.jpeg" title="XEm thư coi sao"></a>
-                <a data-slide-index="3"><img src="../img/4.jpeg" title="XEm thư coi sao"></a>
-                <a data-slide-index="4"><img src="../img/5.jpeg" title="XEm thư coi sao"></a>
-                <a data-slide-index="5"><img src="../img/6.jpeg" title="XEm thư coi sao"></a>
-            </div>
-            <script>
-                $(document).ready(function(){
-                    $(".slider2").bxSlider({
-                        minSlides: 2,
-                        pagerCustom: '#bx-page'
-                    });
-                })
-            </script>
-        </div>
         <div class="clr"></div>
         <div id="left_column">
             left
