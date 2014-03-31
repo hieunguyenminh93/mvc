@@ -15,8 +15,7 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
 }
 .wrapper{
 	margin: 0 auto;
-	width:1000px;
-	
+	width:970px;
 }
 .box-content{
 	width:100%;
@@ -24,17 +23,20 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
 	margin-bottom: 10px;
 	height:30px;
 	box-shadow: 0 0 5px;
-	padding: 10px;
+	padding: 8px;
 	background: white;
 }
 .title-bar{
 	position:fixed;
-	margin-bottom:30px;
-	
+    background: #01548d;
+
 }
 .search{
-	margin: 0 auto;
-	width: 980px;
+	float: right;
+    margin-right: 95px;
+}
+.search ul{
+    list-style: none;
 }
 .logo{
 	width:100px;
@@ -50,12 +52,12 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
 .menu{
 	float:right;
 	margin-right: 30px;
+
 }
 ul.bar-menu li {
 	display: inline-block;
-	background: #ddd;
 	height: 20px;
-	/*width: 140px;*/
+	border-radius: 3px;
 	padding: 5px 10px;
 	vertical-align: middle;
 }
@@ -68,19 +70,22 @@ ul.bar-menu li ul {
 	padding: 0;
 }
 ul.bar-menu li:hover{
-	opacity: 0.8;
-	background: #aaa;
+	opacity: 0.5;
+	background: #29447E;
+
 }
 ul.bar-menu li:hover ul {
 	display: block;
 }
 ul.bar-menu li a{
 	text-decoration: none;
+    color: #F2F2F2;
 }
 /*
 * end menu bar
 */
 .body{
+
 	height: 1000px;
 }
 /*
@@ -91,6 +96,7 @@ ul.bar-menu li a{
 		width: 680px;
 		box-shadow: 0 0 5px;
 		float: right;
+		
 }
 .product-category{
 		padding: 15px;
@@ -104,10 +110,35 @@ ul.bar-menu li a{
 	margin: 5px
 }
 .clr{
-	clear:both;
-	
+	clear:both;	
 }
 
 /*
  * end product
  */
+/*
+ * login pag
+ */
+.login-form{
+	margin: 0 auto;
+	width: 600px;
+    padding: 30px;
+    background: #dcdcdc;
+    border: #417dc6 thick;
+    box-shadow: 0 0 5px;
+}
+.login-row{
+    width: 100%;
+
+}
+.login-row-col{
+    width: 250px;
+    float: left;
+}
+.form-label{
+	width: 200px;
+}
+/*
+ * End login page
+ */
+

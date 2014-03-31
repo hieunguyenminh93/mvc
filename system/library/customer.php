@@ -38,5 +38,8 @@
 				}
 			}
 		}
+		public function logout(){
+			
+		}
 	}
 ?>

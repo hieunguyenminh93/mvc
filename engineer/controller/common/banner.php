@@ -6,7 +6,7 @@
 			//load data for getbanner
 			
 			$this->template = TEMPLATE .'/default/template/common/banner.tpl';
-			
+
 			
 			$this->response->setOutput($this->render());
 		}

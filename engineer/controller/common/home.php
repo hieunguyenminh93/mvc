@@ -5,7 +5,7 @@
 			$this->language->get('/common/home');
 			$this->data['body'] = 'AAAAAAAAAAAA';
 			$this->children = array(
-				'common/header','common/footer','common/column_left','common/banner','common/menu','common/title_bar'
+				'common/header','common/footer','common/column_left','common/menu','common/title_bar'
 			);
 			
 			$this->template = TEMPLATE .'/default/template/common/home.tpl';
