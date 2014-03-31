@@ -2,6 +2,11 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="../css/page.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!-- bxSlider Javascript file -->
+    <script src="../javascript/jquery.bxslider/jquery.bxslider.min.js"></script>
+    <!-- bxSlider CSS file -->
+    <link href="../javascript/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
     <title></title>
 </head>
 <body>
@@ -9,6 +14,30 @@
 </div>
 <div id="wrapper">
     <div id="container">
+        <div id="slider">
+            <div class="slider2">
+                <div class="slider"><img src="../img/1.jpeg" title="XEm thư coi sao"></div>
+                <div class="slider"><img src="../img/2.jpeg" title="XEm thư coi sao"></div>
+                <div class="slider"><img src="../img/3.jpeg" title="XEm thư coi sao"></div>
+                <div class="slider"><img src="../img/4.jpeg" title="XEm thư coi sao"></div>
+                <div class="slider"><img src="../img/5.jpeg" title="XEm thư coi sao"></div>
+                <div class="slider"><img src="../img/6.jpeg" title="XEm thư coi sao"></div>
+              </div>
+            <script>
+                $(document).ready(function(){
+                    $(".slider2").bxSlider({
+                        slideWidth: 5000,
+                        minSlides: 3,
+                        maxSlides: 3,
+                        moveSlides: 2,
+                        captions: true,
+                        startSlide: 2
+
+                    });
+                })
+            </script>
+        </div>
+        <div class="clr"></div>
         <div id="left_column">
             left
         </div>
