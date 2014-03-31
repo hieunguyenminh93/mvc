@@ -12,7 +12,7 @@
 			$this->template = TEMPLATE .'/default/template/about/about.tpl';
 			
 			$this->children = array(
-					'common/header','common/footer','common/column_left','common/banner','common/menu','common/title_bar'
+					'common/header','common/footer','common/column_left','common/title_bar'
 			);
 			$this->response->setOutput($this->render());
 		}

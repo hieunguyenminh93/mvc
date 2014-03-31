@@ -32,7 +32,7 @@ class ControllerCommonTitleBar extends Controller{
 		$this->data['menu_button'] = $button;
 		unset($button);
 		
-		$this->template = TEMPLATE .'/default/template/common/title_bar.tpl';
+		$this->template = TEMPLATE .'/shop/template/common/title_bar.tpl'; //get path from database replace it!!!
 		$this->response->setOutput($this->render());	
 	}
 }

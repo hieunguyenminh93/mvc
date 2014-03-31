@@ -17,5 +17,4 @@
         </ul>
     </div>
 </div>
-<div class="wrapper">
-<div class="box-content"></div>
+<div id="wrapper">

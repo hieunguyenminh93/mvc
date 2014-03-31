@@ -1,5 +1,4 @@
 <div class="product">
-	<div class="product">
 		<?php if(!is_null($product)){
 			$cat_id_old = -1;
 			foreach($product as $pro){
@@ -19,5 +18,5 @@
 		}
 		}?>
 		<div class="clr"></div>
-	</div>
 </div>
+<div class="clr"></div>
