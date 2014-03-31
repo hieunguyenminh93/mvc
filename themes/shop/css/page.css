@@ -64,6 +64,15 @@ img{
     width: 200px;
     height: 200px;
 }
+#bx-page{
+    height: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+#bx-page img{
+    width: 30px;
+    height: 30px;
+}
 /*
 *   end slider
 */
