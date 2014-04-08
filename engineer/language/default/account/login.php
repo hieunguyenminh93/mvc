@@ -9,4 +9,5 @@ $_['login_heading'] = "User login";
 $_['username'] = "Username:";
 $_['passwd'] = "Password:";
 $_['forgot'] = "Forgot account!";
+$_['remember'] = "Remember user!"
 ?>

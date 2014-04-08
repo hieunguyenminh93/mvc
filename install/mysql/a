@@ -1,0 +1,8 @@
+use mvc;
+
+create table app_category(id int not null primary key AUTO_INCREMENT, name text,des text);
+create table username(id int not null primary key AUTO_INCREMENT, username varchar(20),passwd varchar(16));
+create table app(id int not null primary key AUTO_INCREMENT, app_name varchar(20) not null,
+id_category int references app_category(id), des text,required text,username_id int not null references username(id) 
+,vote int,view int, down int);
+insert into username values('hieu','1234');

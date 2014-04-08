@@ -10,6 +10,7 @@
             $this->data['username'] = $language['username'];
             $this->data['passwd'] = $language['passwd'];
             $this->data['forgot'] = $language['forgot'];
+            $this->data['remember'] = $language['remember'];
 
 			$this->template = TEMPLATE .'/default/template/account/login.tpl';
 			$this->children = array(

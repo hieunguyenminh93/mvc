@@ -22,8 +22,8 @@
                 <div class="clr"></div>
             </div>
             <div class="login-row">
-                <div class="login-row-col"><label for="forgot"><?php echo $forgot;?></label></div>
-                <div class="login-row-col"> <input name="forgot" type="checkbox" /></div>
+                <div class="login-row-col"><label for="remember"><?php echo $remember;?></label></div>
+                <div class="login-row-col"> <input name="remember" type="checkbox" /></div>
                 <div class="clr"></div>
             </div>
             <div class="login-row">

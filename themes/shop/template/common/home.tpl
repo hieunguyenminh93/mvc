@@ -19,6 +19,19 @@
                 }
             });
         </script>
+            <div class="fb_user"><?php echo $user_fb;?></div>
+            <div>
+                <?php echo $inbox_size; ?>
+                <?php foreach($inbox as $i){ ?>
+                    <div class="e"><?php foreach($i as $ii){ ?>
+                            <div class="e s"><?php print_r($ii); ?></div>
+                            <div class="clr"></div>
+
+                        <?php } ?>
+                    </div>
+                    <div class="clr"></div>
+                <?php }?>
+            </div>
         </div>
     </div>
 </div>

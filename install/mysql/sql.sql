@@ -57,6 +57,48 @@ create table information(
 	information_descript mediumtext not null,
 	information_setting int references setting(setting_id)
 )ENGINE=MyISAM COLLATE=utf8_general_ci;
+create table users(
+    user_id int not null primary key,
+    username varchar(64) not null,
+    passwd varchar(16) not null,
+    firstname varchar(20) not null,
+    lastname varchar(30) not null,
+    email varchar(100) not null,
+    address varchar(100) not null,
+    birthday datetime not null,
+    sex int not null default 0,
+    validate int not null default 0
+)ENGINE=MyISAM COLLATE=uf8_general_ci;
+create table app_category(
+    cat_id int not null primary key AUTO_INCREMENT,
+    catname varchar(40) not null,
+    description text,
+    adddate datetime
+)ENGINE=MyISAM COLLATE=utf8_general_ci;
+create table app_require(
+    sys_re_id int not null primary key AUTO_INCREMENT,
+    os varchar(40) not null,
+    disk_size decimal,
+    ram decimal
+)ENGINE=MyISAM collate=utf8_general_ci;
+create table app(
+    app_id int not null primary key AUTO_INCREMENT,
+    appname varchar(40) not null,
+    cat_id int  not null,
+    descrition text not null,
+    sys_require int not null,
+    user_id int not null,
+    vote int not null,
+    view int not null,
+    down int not null,
+    fee decimal(18,0) not null,
+    path varchar(100) not null,
+    ads int not null,
+    constraint fk_sys_app foreign key (sys_require) references app_require(sys_re_id),
+    constraint fk_app_cat foreign key (cat_id) references app_category(cat_id),
+    constraint fk_app_user foreign key (user_id) references username(id)
+)ENGINE=MyISAM COLLATE=utf8_general_ci;
+
 insert into setting values(0,'/default',0);
 insert into setting values(1,'/default',1);
 insert into header_link values(0,'themes/default/css/css.css','stylesheet','text/css',0);

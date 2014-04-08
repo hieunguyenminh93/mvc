@@ -86,7 +86,14 @@ ul.bar-menu li a{
 */
 .body{
 
-	height: 1000px;
+	min-height: 1000px;
+}
+.e{
+    background: #F2F2F2;
+    margin-bottom: 20px;
+}
+.s{
+    background: #46a73e;
 }
 /*
  * content for product

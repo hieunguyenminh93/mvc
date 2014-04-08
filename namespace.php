@@ -13,4 +13,5 @@
     require_once SYSTEM_LIB.'/document.php';
     require_once SYSTEM_LIB .'/session.php';
     require_once SYSTEM_LIB .'/customer.php';
+    require SYSTEM_LIB .'/facebook.php';
 ?>

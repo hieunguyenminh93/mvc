@@ -22,6 +22,17 @@ $db_config = array (
 
 $db = new Database ( $db_config );
 $registry->set ( 'db', $db );
+
+//facebook
+$config_fb = array(
+    'appId' => '1390454514508590',
+    'secret' => '21fc9014c169cb9baac0b97e309fc17f',
+    'cookie' => true,
+    'oauth' => true
+);
+$fb = new Facebook($config_fb);
+$registry->set('fb',$fb);
+$registry->set('fb_user',$fb->getUser());
 // loader
 $loader = new Loader ( $registry );
 $registry->set ( "load", $loader );
@@ -39,6 +50,7 @@ $registry->set ( 'session', $session );
 $customer = new Customer ( $registry );
 $registry->set ( 'customer', $customer );
 
+
 // document
 $document = new Document ();
 $registry->set ( 'document', $document );
@@ -49,6 +61,11 @@ $registry->set ( "response", $response );
 $language = new Language ( 'default/' ); // this lang loading from database;
 $registry->set ( 'language', $language );
 
+
+
+//
+
+//
 // controller
 $controller = new Front ( $registry );
 //
