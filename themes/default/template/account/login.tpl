@@ -1,6 +1,5 @@
 <?php echo $header; ?>
 <?php echo $title_bar; ?>
-<?php echo $banner; ?>
 <div class="box-content body">
 	<div class="login-title">
 		<?php echo $login; ?>
@@ -28,6 +27,7 @@
             </div>
             <div class="login-row">
                 <input type="submit" name="submit" value="<?php echo $button_login;?>">
+                <span><a href="index.php?route=account/register"><?php echo $button_register;?></a> </span>
             </div>
 
         </form>

@@ -9,7 +9,7 @@
     class ControllerAppApp extends Controller{
         function running(){
             //TODO process with app request
-            
+
             $this->load->model('app/app');
 
             $this->document->setTitle("App");

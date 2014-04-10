@@ -12,6 +12,14 @@
         <ul>
             <li id="search-li">
                 <input name="search" type="text" id="suggest" style="width: 568px; height: 24px; padding-left: 5px;">
+                <script type="javascript">
+                    $(function(){
+                        var availableTags = ["a","b","ab","bb"];
+                        $("#suggest").autocomplete({
+                            source: availableTags
+                        });
+                    });
+                </script>
             </li>
 
         </ul>

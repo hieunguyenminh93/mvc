@@ -18,13 +18,13 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fiel
 	width:970px;
 }
 .box-content{
-	width:100%;
 	margin: 0 auto;
 	margin-bottom: 10px;
 	min-height:30px;
 	box-shadow: 0 0 5px;
-	padding: 8px;
+	padding: 10px 10px 20px 10px;
 	background: white;
+    border-radius: 3px;
 }
 .title-bar{
 	position:fixed;
@@ -85,8 +85,6 @@ ul.bar-menu li a{
 * end menu bar
 */
 .body{
-
-	min-height: 1000px;
 }
 .e{
     background: #F2F2F2;
@@ -148,4 +146,29 @@ ul.bar-menu li a{
 /*
  * End login page
  */
-
+/*
+* register
+*/
+.register-form{
+    margin: 0 auto;
+    width: 400px;
+    padding-top: 20px;
+}
+.form-input{
+    width: 205px;
+    float: left;
+}
+.form-input > input{
+    width: 198px;
+    float: left;
+}
+.message-error{
+    float: left;
+    color: red;
+}
+.input-ok{
+    background: #46a73e;
+}
+/*
+* end register
+*/

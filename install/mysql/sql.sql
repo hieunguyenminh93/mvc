@@ -98,7 +98,6 @@ create table app(
     constraint fk_app_cat foreign key (cat_id) references app_category(cat_id),
     constraint fk_app_user foreign key (user_id) references username(id)
 )ENGINE=MyISAM COLLATE=utf8_general_ci;
-
 insert into setting values(0,'/default',0);
 insert into setting values(1,'/default',1);
 insert into header_link values(0,'themes/default/css/css.css','stylesheet','text/css',0);

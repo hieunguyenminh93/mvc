@@ -6,6 +6,7 @@
 
             $this->data['login'] = "Login page";
 			$this->data['button_login'] = $language['button_login_name'];
+            $this->data['button_register'] = $language['button_register_name'];
             $this->data['login_heading'] = $language['login_heading'];
             $this->data['username'] = $language['username'];
             $this->data['passwd'] = $language['passwd'];
