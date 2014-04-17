@@ -13,7 +13,7 @@ $_['label_firstname'] = "First name";
 $_['label_lastname'] = "Last name";
 $_['label_birthday'] = "Birthday";
 $_['label_submit'] = "Register";
-
+$_['register_ok'] = "Register success";
 $_['or_login'] = "Or login";
 
 ?>

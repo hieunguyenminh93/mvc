@@ -12,8 +12,15 @@
             $this->data['passwd'] = $language['passwd'];
             $this->data['forgot'] = $language['forgot'];
             $this->data['remember'] = $language['remember'];
+            if($this->user->logged()){
+                $this->data['message'] = "Logged";
+                $this->template = TEMPLATE .'/default/template/account/logined.tpl';
+            }else{
+                $this->template = TEMPLATE .'/default/template/account/login.tpl';
+            }
 
-			$this->template = TEMPLATE .'/default/template/account/login.tpl';
+
+
 			$this->children = array(
 					'common/header','common/footer','common/column_left','common/banner','common/menu','common/title_bar'
 			);

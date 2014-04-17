@@ -32,10 +32,13 @@ class ControllerAccountRegister extends Controller{
                 $this->template = TEMPLATE ."/default/template/account/register.tpl";
             }else{
                 $this->load->model('account/register');
-                if($this->model_account_register->insertUser()){
-                    $this->data['message'] = "Ok";
+                if($this->model_account_register->insertUser($this->request->post)){
+
+                    $this->data['message'] = $language['register_ok'];
                     $this->template = TEMPLATE ."/default/template/account/register_ok.tpl";
-                };
+                }else{
+                    echo('Data error');
+                }
             }
         }else{
             $this->template = TEMPLATE ."/default/template/account/register.tpl";

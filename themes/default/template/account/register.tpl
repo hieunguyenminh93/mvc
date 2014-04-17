@@ -88,7 +88,7 @@
                         <label for="birthday"><?php echo $label_for_birthday;?></label>
                     </div>
                     <div class="form-input">
-                        <input name="birthday" type="text" id="birthday">
+                        <input name="birthday" type="text" id="birthday" data-pattern="">
                     </div>
                     <div class="message-error" id="e-birthday"></div>
                     <div class="clr"></div>
@@ -96,9 +96,9 @@
                 <div class="row-input">
                     <div class="form-label">
                         <label for="sex-m" style="width: 90px"><?php echo $label_for_sex_m;?></label>
-                        <input type="radio" name="sex" id="sex-m">
+                        <input type="radio" name="sex" id="sex-m" value="0">
                         <label for="sex-f" style="width: 90px"><?php echo $label_for_sex_f;?></label>
-                        <input name="sex" type="radio" id="sex-f">
+                        <input name="sex" type="radio" id="sex-f" value="1">
                     </div>
                     <div class="form-input">
 

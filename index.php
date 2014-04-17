@@ -49,7 +49,8 @@ $registry->set ( 'session', $session );
 // customer
 $customer = new Customer ( $registry );
 $registry->set ( 'customer', $customer );
-
+$user = new User();
+$registry->set('user',$user);
 
 // document
 $document = new Document ();
