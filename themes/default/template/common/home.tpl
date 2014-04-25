@@ -2,12 +2,14 @@
 <?php echo $title_bar; ?>
 <?php echo $banner; ?>
 <div class="box-content body">
+    <?php echo $slider;?>
+</div>
+<div class="box-content body data">
 	<div class="ui-widget">
-		<div class="ui-state-error ui-corner-all"></div>
+
 	</div>
-	<div class="load-product">
-	</div>
-	<script>
+
+	<script type="text/javascript">
 		$.ajax({
 			url: "ajax/load_product.php",
 			data: {"route":"acbcs"},
@@ -19,7 +21,7 @@
 				
 			},
 			success: function(data,status,XHR){
-				$(".load-product").append(data);
+				$(".box-content.body.data").append(data);
 			} 
 		});
 	</script>

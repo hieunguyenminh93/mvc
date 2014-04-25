@@ -1,0 +1,72 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+#dashboard{
+    background: #0044cc;
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    width: 150px;
+    height: 300px;
+}
+#dashboard:hover{
+    background: #fff8d1;
+}
+.d-menu{
+    position: relative;
+    background: #003399;
+    width: 140px;
+    height: 60px;
+    margin: 5px 5px 0px 5px;
+}
+.d-menu:hover{
+    background: #46a73e;
+}
+
+/**
+* new test for admin item menu
+**/
+
+#wrap-menu{
+    width: 100%;
+    height: 60px;
+    background: #011119;
+    color: #fff8d1;
+}
+#menu{
+    width: 1000px;
+    padding: 5px;
+    margin: 0 auto;
+    background: #0e0e0e;
+    position: relative;
+
+}
+.menu-item{
+    text-align: center;
+    line-height: 44px;
+    text-decoration-line: line-through;
+    width: 194px;
+    height: 44px;
+    background: #46a73e;
+    display: inline-block;
+    margin: 2px auto;
+    padding: 1px;
+}
+.menu-item:hover .submenu{
+    position: relative;
+    display: block;
+}
+.submenu{
+
+    display: none;
+}
+.submenu-item{
+    background: #0e0e0e;
+    color: #fff8d1;
+    position: absolute;
+}
+.clr{
+    clear: both;
+}

@@ -11,4 +11,7 @@
     require_once SYSTEM_LIB.'/language.php';
     require_once SYSTEM_LIB.'/response.php';
     require_once SYSTEM_LIB.'/document.php';
+    require_once SYSTEM_LIB. '/user.php';
+    require_once SYSTEM_LIB. '/session.php';
+    require_once SYSTEM_LIB. '/encrypter.php';
 ?>

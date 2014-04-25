@@ -2,7 +2,7 @@
 <?php echo $title_bar;?>
 <?php echo $slider;?>
     <div id="container">
-        <div class="box-content body">
+        <div class="box-content">
         <script>
             $.ajax({
                 url: "ajax/load_product.php",

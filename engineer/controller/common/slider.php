@@ -8,7 +8,14 @@
 
 class ControllerCommonSlider extends Controller{
     public function running(){
-        $this->template = TEMPLATE .'/themes/shop/template/slider.tpl';
-        $this->respone->setOutput($this->render());
+
+        $this->load->model('product/product');
+        $data = $this->model_product_product->getProducts();
+
+        $this->data['product'] = $data;
+
+        unset($data);
+        $this->template = TEMPLATE .'/default/template/product/slider.tpl';
+        $this->response->setOutput($this->render());
     }
 } 

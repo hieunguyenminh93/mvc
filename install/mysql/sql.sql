@@ -68,7 +68,7 @@ create table users(
     birthday datetime not null,
     sex int not null default 0,
     validate int not null default 0
-)ENGINE=MyISAM COLLATE=uf8_general_ci;
+)ENGINE=MyISAM COLLATE=utf8_general_ci;
 create table app_category(
     cat_id int not null primary key AUTO_INCREMENT,
     catname varchar(40) not null,
@@ -98,6 +98,19 @@ create table app(
     constraint fk_app_cat foreign key (cat_id) references app_category(cat_id),
     constraint fk_app_user foreign key (user_id) references username(id)
 )ENGINE=MyISAM COLLATE=utf8_general_ci;
+create table admin_header_link(
+    link_id int not null primary key,
+    href varchar(100) not null,
+    rel varchar(20) not null,
+    type varchar(20) not null,
+    setting int not null references setting(setting_id)
+)ENGINE=MyISAM COLLATE=utf8_general_ci;
+create table admin_header_script(
+	script_id int not null primary key,
+	src varchar(100) not null,
+	type varchar(20) not null,
+	setting int not null references setting(setting_id)
+)ENGINE=MyISAM COLLATE=utf8_general_ci;
 insert into setting values(0,'/default',0);
 insert into setting values(1,'/default',1);
 insert into header_link values(0,'themes/default/css/css.css','stylesheet','text/css',0);
@@ -116,3 +129,4 @@ insert into menu(menu_id,menu_href,menu_name,menu_setting)values(2,'index.php?ro
 insert into menu(menu_id,menu_href,menu_name,menu_setting)values(3,'index.php?route=about/contact','button_name_contact',1);
 insert into customer(customer_firstname,customer_lastname,customer_email,customer_brithday,customer_password) values('Nguyen',' Minh Hieu','hieunguyenminh.93@gmail.com','10/05/1993',password('G0013chamcom'));
 insert into information(information_id,information_descript,information_setting) values(0,"Thong tin ve chung toi",1);
+insert into admin_header_link values(0,'/default/css/css.css','stylesheet','text/css',0);

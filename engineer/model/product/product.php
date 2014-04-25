@@ -10,5 +10,10 @@
 			$data = $this->db->query($sql);
 			return $data->rows;
 		}
+        public function getProductCat($id){
+            $sql = "select * from product pr inner join category ca on pr.product_category = ca.category_id where ca.category_id = $id order by pr.product_category";
+            $data = $this->db->query($sql);
+            return $data->rows;
+        }
 	}
 ?>

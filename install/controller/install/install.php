@@ -61,6 +61,7 @@ class ControllerInstallInstall extends Controller {
 		$output .= "define(\"DB_USER\",\"$args[username]\");\n";
 		$output .= "define(\"DB_PASSWD\",\"$args[passwd]\");\n";
 		$output .= "define(\"DB_DRIVER\",\"mysql\");\n";
+        $output .= "define(\"ADMIN\",\"mysql\");\n";
 		$output .= "define(\"DB_DB\",\"$args[db]\");\n";
 		// more define here etc....
 		$config = fopen ( $dir . '/admin/config.php', 'x' );

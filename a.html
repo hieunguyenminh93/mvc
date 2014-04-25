@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test 1</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="themes/default/javascript/jquery.bxslider.min.js"></script>
+    <link href="themes/default/css/layout.css" rel="stylesheet" type="text/css" >
+    <link href="themes/shop/css/page.css" rel="stylesheet" type="text/css" >
+    <link href="themes/default/css/jquery.bxslider.css" rel="stylesheet" type="text/css" >
+
+    <meta charset="utf-8" />
+</head>
+<body>
+<div id="fixed-menu">
+    <div class="menu">
+        <ul class="bar-menu">
+            <li>
+                <a href="index.php">Home</a>
+            </li>
+            <li>
+                <a href="index.php?route=about/about">About</a>
+            </li>
+            <li>
+                <a href="index.php?route=about/contact">Contact</a>
+            </li>
+            <li>
+                <a href="index.php?route=account/login">Login/Register</a>
+            </li>
+        </ul>
+    </div>
+    <div class="search">
+        <ul>
+            <li id="search-li">
+                <input name="search" type="text" id="suggest" style="width: 568px; height: 24px; padding-left: 5px;">
+                <script type="text/javascript">
+                    /*$(function(){
+                        var availableTags = ["a","b","ab","bb"];
+                        $("#suggest").autocomplete({
+                            source: availableTags
+                        });
+                    });*/
+                </script>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<div id="wrapper">
+    <div class="box-content body">
+        <div id="slider">
+            <script >
+                $(document).ready(function(){
+                    $(".slider2").bxSlider({
+                        minSlides: 2,
+                        pagerCustom: '#bx-page'
+                    });
+                });
+            </script>
+            <div class="slider2">
+                <div class="slider"><img src="themes/default/img/slider/1.jpeg" title="XEm thư coi sao" alt=""></div>
+                <div class="slider"><img src="themes/default/img/slider/2.jpeg" title="XEm thư coi sao" alt=""></div>
+                <div class="slider"><img src="themes/default/img/slider/3.jpeg" title="XEm thư coi sao" alt=""></div>
+                <div class="slider"><img src="themes/default/img/slider/4.jpeg" title="XEm thư coi sao" alt=""></div>
+                <div class="slider"><img src="themes/default/img/slider/5.jpeg" title="XEm thư coi sao" alt=""></div>
+                <div class="slider"><img src="themes/default/img/slider/6.jpeg" title="XEm thư coi sao" alt=""></div>
+            </div>
+            <div id="bx-page">
+                <a data-slide-index="0"><img src="themes/default/img/slider/1.jpeg" title="XEm thư coi sao" alt=""></a>
+                <a data-slide-index="1"><img src="themes/default/img/slider/2.jpeg" title="XEm thư coi sao" alt=""></a>
+                <a data-slide-index="2"><img src="themes/default/img/slider/3.jpeg" title="XEm thư coi sao" alt=""></a>
+                <a data-slide-index="3"><img src="themes/default/img/slider/4.jpeg" title="XEm thư coi sao" alt=""></a>
+                <a data-slide-index="4"><img src="themes/default/img/slider/5.jpeg" title="XEm thư coi sao" alt=""></a>
+                <a data-slide-index="5"><img src="themes/default/img/slider/6.jpeg" title="XEm thư coi sao" alt=""></a>
+            </div>
+
+        </div></div>
+    <div class="box-content body">
+        Array
+        (
+        [0] => Array
+        (
+        [product_id] => 1
+        [product_name] => Product 1
+        [product_price] => 10
+        [product_descript] =>
+        [product_category] => 1
+        [product_date_add] =>
+        [product_date_modified] =>
+        [product_status] => 1
+        [category_id] => 1
+        [category_name] => Test 1
+        [category_description] => Test 1
+        [category_date_add] => 2014-03-16 19:15:37
+        [category_status] => 1
+        )
+
+        [1] => Array
+        (
+        [product_id] => 3
+        [product_name] => Product 1 2
+        [product_price] => 10
+        [product_descript] =>
+        [product_category] => 1
+        [product_date_add] =>
+        [product_date_modified] =>
+        [product_status] => 1
+        [category_id] => 1
+        [category_name] => Test 1
+        [category_description] => Test 1
+        [category_date_add] => 2014-03-16 19:15:37
+        [category_status] => 1
+        )
+
+        )
+    </div>
+
+</div>
+<div id="footer"></div>
+</body>
+</html>

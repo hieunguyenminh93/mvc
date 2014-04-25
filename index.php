@@ -6,7 +6,7 @@ if (file_exists ( 'config/config.php' )) {
 	header ( "Location: install/index.php" );
 	exit ();
 }
-error_reporting ( '^E_NOTICE' );
+error_reporting ( 'E_NOTICE' );
 // Startup
 require_once 'namespace.php';
 // registry
@@ -46,15 +46,22 @@ if (! isset ( $route )) {
 // session create;
 $session = new Session ();
 $registry->set ( 'session', $session );
+
 // customer
 $customer = new Customer ( $registry );
 $registry->set ( 'customer', $customer );
-$user = new User();
+$user = new User($registry);
 $registry->set('user',$user);
 
 // document
 $document = new Document ();
 $registry->set ( 'document', $document );
+
+//encrypter
+$encrypter = new Encrypter();
+$registry->set('encrypter',$encrypter);
+
+
 // response
 $response = new Response ();
 $registry->set ( "response", $response );
@@ -75,5 +82,6 @@ $controller->addPreAction ( new Action ( 'common/header' ) );
 
 $controller->dispatch ( new Action ( $route ), new Action ( "error/not_found" ) );
 $response->output ();
+
 
 ?>

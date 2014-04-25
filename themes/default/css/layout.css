@@ -172,3 +172,35 @@ ul.bar-menu li a{
 /*
 * end register
 */
+/**
+*  menu left
+**/
+#dashboard-root{
+    position: absolute;
+    top: 40px;
+    left: -150px;
+    width: 150px;
+
+}
+#dashboard{
+    background: #0044cc;
+    position: fixed;
+    height: 265px;
+}
+#dashboard:hover{
+    background: #fff8d1;
+}
+.d-menu{
+    position: relative;
+    background: #003399;
+    width: 140px;
+    height: 60px;
+    margin: 5px 5px 0px 5px;
+}
+.d-menu:hover{
+    background: #46a73e;
+}
+
+/**
+*  end menu left
+**/

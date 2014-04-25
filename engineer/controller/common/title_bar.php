@@ -14,10 +14,11 @@ class ControllerCommonTitleBar extends Controller{
 			);
 			$i++;
 		}
-		$customer = $this->customer;
-		if(isset($customer->sesion->data['customer_id'])){
+
+		if($this->user->logged()){
+            $profile = $this->user->getProfile()->row;
 			$button[$i] = array(
-				'href'=> 'index.php?route=account/account&customer_id'.$customer->session->data['customer'],
+				'href'=> 'index.php?route=account/account&user_id='.$profile['user_id'],
 				'name'=>$language['button_name_customer_logged']
 			);
 		}else{
@@ -32,7 +33,7 @@ class ControllerCommonTitleBar extends Controller{
 		$this->data['menu_button'] = $button;
 		unset($button);
 		
-		$this->template = TEMPLATE .'/shop/template/common/title_bar.tpl'; //get path from database replace it!!!
+		$this->template = TEMPLATE .'/default/template/common/title_bar.tpl'; //get path from database replace it!!!
 		$this->response->setOutput($this->render());	
 	}
 }

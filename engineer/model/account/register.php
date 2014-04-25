@@ -20,9 +20,9 @@ class ModelAccountRegister extends Model{
             isset($user_info['email']) &&
             isset($user_info['birthday']) &&
             isset($user_info['sex'])){
-
+            $pass = $this->encrypter->encrypt($user_info['username'],$user_info['passwd']);
             $sql = "insert into users(username,passwd,firstname,lastname,email,address,birthday,sex)
-            values('$user_info[username]','password($user_info[passwd])','$user_info[firstname]','$user_info[lastname]','$user_info[email]','$user_info[address]','$user_info[birthday]','$user_info[sex]')";
+            values('$user_info[username]','$pass','$user_info[firstname]','$user_info[lastname]','$user_info[email]','$user_info[address]','$user_info[birthday]','$user_info[sex]')";
             $this->result = $this->db->query($sql);
 
             return true;

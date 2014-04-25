@@ -11,7 +11,7 @@
     background: #46a73e;
     height: 40px;
     width: 100%;
-    z-index: 10000;
+    z-index: 88;
 }
 body{
     margin: 0;
@@ -22,6 +22,7 @@ body{
     width: 1000px;
     padding: 44px 15px 15px 15px;
     background: #9FA9B3;
+    position: relative;
 }
 #container{
 
@@ -53,6 +54,16 @@ body{
 .clr{
     clear: both;
 }
+
+.box-content{
+    margin: 0 auto;
+    margin-bottom: 10px;
+    min-height:30px;
+    box-shadow: 0 0 5px;
+    padding: 10px 10px 20px 10px;
+    background: white;
+    border-radius: 3px;
+}
 /*
 * slider
 */
@@ -66,7 +77,6 @@ img{
     height: 200px;
 }
 #bx-page{
-    height: 200px;
     margin: 0 auto;
     text-align: center;
 }
