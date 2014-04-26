@@ -23,7 +23,7 @@
             $this->data['inbox_size'] = count($data_inbox);
             $this->data['user_fb'] = $user;
 			$this->children = array(
-				'common/header','common/footer','common/column_left','common/menu','common/title_bar','common/slider'
+				'common/header','common/footer','common/column_left','common/menu','common/title_bar','common/slider','common/product_home'
 			);
 			$this->template = TEMPLATE .'/default/template/common/home.tpl';
 			$this->response->setOutput($this->render());

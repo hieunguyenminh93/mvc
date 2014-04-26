@@ -4,6 +4,9 @@
 <div class="box-content body">
     <?php echo $slider;?>
 </div>
+<div class="box-content body">
+    <?php echo $product_home;?>
+</div>
 <div class="box-content body data">
 	<div class="ui-widget">
 
@@ -21,7 +24,7 @@
 				
 			},
 			success: function(data,status,XHR){
-				$(".box-content.body.data").append(data);
+				//$(".box-content.body.data").append(data);
 			} 
 		});
 	</script>

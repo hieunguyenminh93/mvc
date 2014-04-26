@@ -1,9 +1,9 @@
 * {
     outline: medium none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 html {
-    background: none repeat scroll 0 0 #000000;
-    color: #000000;
+    background: none repeat scroll 0 0 #E9EAED;
 }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, th, td {
@@ -104,18 +104,89 @@ ul.bar-menu li a{
 		
 }
 .product-category{
-		padding: 15px;
+	padding: 15px;
+    background: #E9EAED !important;
 }
 .product-detail{
 	float: left;
 	padding: 5px;
 	width:200px;
-	heigh:200px;
+	heigh: 200px;
 	border: 1px solid aqua;
 	margin: 5px
 }
 .clr{
 	clear:both;	
+}
+/* Product new*/
+.product-category{
+    background: #E9EAED;
+}
+.product-item{
+    width: 150px;
+    height: 245px;
+    background: #fff;
+    padding: 2px;
+    position: relative;
+    border-radius: 5px;
+    float: left;
+    overflow: visible;
+    margin-left: 15px ;
+}
+.product-img{
+    width: 148px;
+    height: 148px;
+    border-radius: 5px;
+
+
+}
+.product-img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 31px;
+    padding: 25px;
+
+}
+
+.hidden:hover{
+    display: inline;
+    opacity: 0.3;
+    border-radius: 5px;
+}
+.hidden{
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    opacity: 0;
+    background: #000000;
+    z-index: 1;
+    top:0;
+    left: 0;
+}
+.product-details{
+    padding: 5px;
+
+    top: 140px;
+    background: #fff;
+    width: 92%;
+    height: 85px;
+    border-radius: 5px;
+}
+.product-details:hover{
+    opacity: 0.5;
+}
+.product-oder{
+
+}
+.product-rate{
+    padding: 5px;
+    float: left;
+
+}
+.product-price{
+    padding: 5px;
+    float: left;
+
 }
 
 /*
@@ -178,17 +249,17 @@ ul.bar-menu li a{
 #dashboard-root{
     position: absolute;
     top: 40px;
-    left: -150px;
+    left: -136px;
     width: 150px;
 
 }
 #dashboard{
-    background: #0044cc;
+    background: #7C7C7C;
     position: fixed;
     height: 265px;
 }
 #dashboard:hover{
-    background: #fff8d1;
+    background: red;
 }
 .d-menu{
     position: relative;
@@ -204,3 +275,16 @@ ul.bar-menu li a{
 /**
 *  end menu left
 **/
+/**
+* button back top
+**/
+
+#button-top{
+    position: absolute;
+    z-index: 10000;
+}
+#button-top1{
+    position: fixed;
+    bottom: 1px;
+    right: 0px;
+}
